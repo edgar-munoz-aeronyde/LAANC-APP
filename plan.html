@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/aeronyde_name.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9_3Tyu14z8VAgV3n0JKBk2uhi5Jqve4M"></script>
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">    
+</head>       
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            <nav class="navbar navbar-expand-lg">
+                    <img src="images\aeronyde_name.png">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            <div id="mainContent" class="row">
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Details</h5>
+                            <label for="onSiteDate">On-Site Date</label>
+                            <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="onSiteDate">
+                            </div>
+                            <label for="onSiteTime">On-Site Start Time</label>
+                            <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="onSiteStartTime">
+                            </div>
+                            <label for="onSiteTime">On-Site End Time</label>
+                            <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="onSiteEndTime">
+                            </div>
+                            <label for="pilot">Pilot in Command</label>
+                            <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="pilot">
+                            </div>
+                            <label for="crew">Crew</label>
+                            <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="crew">
+                            </div>
+                            <label for="airCraft">AirCraft</label>
+                            <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="airCraft">
+                            </div>
+                            <label for="internalNotes">Internal Notes</label>
+                            <div class="input-group mb-3">
+                            <textarea class="form-control" id="internalNotes" aria-label="With textarea"></textarea>
+                            </div>
+                            <div>
+                            <button type="button" id="submit" class="btn btn-success">Submit</button>
+                            </div>
+                            <button type="button" id="clear" class="btn btn-success">Clear</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="centerContent" class="col-8">
+                    <div id="main-div" class="row">
+                        <div class="col" >
+                            <a href="index.html"><button type="button" id="mapPage" class="btn btn-light">Map</button></a>
+                            <a href="#"><button type="button" id="plan" class="btn btn-secondary">Plan</button></a>
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                    <div id="tableArea" class="row">
+                        <div class="col">
+                            <table class="table" id = "info">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Airport ID</th>
+                                    <th scope="col">Max Alt. (Ft)</th>
+                                    <th scope="col">Requested Alt.</th>
+                                    <th scope="col">Authorization Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="body">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Weather</h5>
+                            <p class="card-text">Wind Speed: <span id="windSpeed"></span> mph</p>
+                            <p class="card-text">Humidity: <span id="humidity"></span>%</p>
+                            <p class="card-text">Temperature: <span id="temperature"></span> F</p>
+                            <p class="card-text">Cloud Cover: <span id="cloudCover"></span>%</p>
+                            <p class-"card-text">Visibility: <span id="visibility"></span></p>
+                            <p class="card-text">City: <span id="city"></span></p>
+                            <p class="card-text"> <span id="icon"></span></p>
+                            <p class="card-text">Description: <span id="description"></span></p>                           
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="footer position-relative">
+                    <img src= "images\aeronyde_blue.png">
+                </footer>
+
+
+            </div>
+
+    <!-- Javascript links -->
+    <script src="javascript.js"></script>
+</body>
+</html>

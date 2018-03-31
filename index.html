@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/aeronyde_name.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdn.airmap.io/js/maps/v2.0/airmap.map.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+</head>       
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            <nav class="navbar navbar-expand-lg">
+                    <img src="images\aeronyde_name.png">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            <div id="mainContent" class="row">
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Airspace</h5>
+                            <h6 class="card-subtitle mb-2 text-muted text-center">Map Legend</h6>
+                            <p><span id="blackSquare">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Prohibited Airspace</p>
+                            <p><span id="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Temporary Flight Restriction</p>
+                            <p><span id="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Restricted Airspace</p>
+                            <p><span id="orange">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Commercial Airspace</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                        <a href="#"><button type="button" id="mapPage" class="btn btn-secondary">Map</button></a>
+                        <a href="plan.html"><button type="button" id="plan" class="btn btn-light">Plan</button></a>
+                        <div id="map"></div>
+                </div>
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Weather</h5>
+                            <p class="card-text">Wind Speed: <span id="windSpeed"></span> mph</p>
+                            <p class="card-text">Humidity: <span id="humidity"></span>%</p>
+                            <p class="card-text">Temperature: <span id="temperature"></span> F</p>
+                            <p class="card-text">Cloud Cover: <span id="cloudCover"></span>%</p>
+                            <p class-"card-text">Visibility: <span id="visibility"></span></p>
+                            <p class="card-text">City: <span id="city"></span></p>
+                            <p class="card-text"> <span id="icon"></span></p>
+                            <p class="card-text">Description: <span id="description"></span></p>                           
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="footer position-relative">
+                    <img src= "images\aeronyde_blue.png">
+                </footer>
+
+
+            </div>
+
+    <!-- Javascript links -->
+    <script src="index_javascript.js"></script>
+</body>
+</html>
